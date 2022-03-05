@@ -29,25 +29,25 @@
             </div>
             <div id="add-feed" class="d-flex justify-content-center pt-2 pb-2" data-bs-toggle="modal"
             data-bs-target="#new-feed">
-                <img class="me-1" id="add-btn" src="assets/icons/anadir.svg" alt="" id="add-btn">
+                <img class="me-1" id="add-icon" src="assets/icons/anadir.svg" alt="" id="add-btn">
                 <p class="m-0 ms-1">Añadir Feed</p>
             </div>
         </div>
          <div class="modal fade" id="new-feed">
-            <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-lg">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
                 <div class="modal-body px-5 py-4">
-                    <h4 class="text-center mb-3">NUEVO FEED</h4>
+                    <h4 class="text-center mb-3 title">NUEVO FEED</h4>
                     <form id="add" class="mb-4">
                         <div class="form-group row mb-2 d-flex align-items-center">
-                            <label  class="col-sm-3 control-label col-form-label-lg" for="url">URL:</label>
-                            <div class="col-sm-9">
+                            <label  class="col-1 control-label col-form-label-lg" for="url">URL:</label>
+                            <div class="col-11">
                                 <input type="text" class="form-control form-control-sm rounded-pill" id="url" name="url">
                             </div>
                         </div>
                       <div class="form-group row d-flex align-items-center">
-                        <label for="categoria" class="col-sm-3 control-label col-form-label-lg">Categoria:</label>
-                        <div class="col-sm-9">
+                        <label for="categoria" class="col-2 control-label col-form-label-lg">Categoria:</label>
+                        <div class="col-10">
                             <input type="text" class="form-control form-control-sm rounded-pill" id="categoria" name="categoria">
                         </div>
                       </div>
@@ -92,10 +92,10 @@
             <!--Modelo notica-->
             <div class="news-container py-5 px-0">
                 <div class="news d-flex justify-content-between align-items-center p-4">
-                    <img src="" alt="imagen">
+                    <img class="news-image" src="" alt="Imagen">
                     <div class="info">
                         <div class="header d-flex justify-content-between pb-3">
-                            <h5>LOREM IPSUM</h5>
+                            <h5 class="title">LOREM IPSUM</h5>
                             <div class="categoria-label d-flex justify-content-center pt-1 pb-1">
                                 <p class="m-0 ms-1">Categoria</p>
                             </div>

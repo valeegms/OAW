@@ -1,5 +1,9 @@
 @import "variables.css";
 
+body {
+  font-family: var(--regular-font);
+}
+
 .siderbar {
   width: 320px;
   background-color: var(--bg-sidebar);
@@ -26,7 +30,7 @@
   width: 28px;
 }
 
-#add-btn,
+#add-icon,
 #refresh-btn {
   width: 24px;
 }
@@ -37,6 +41,10 @@
   position: fixed;
   bottom: 0;
   width: 320px;
+}
+
+#add-feed:hover {
+  background-color: var(--bg-new-feed-hover);
 }
 
 #logo {
@@ -87,6 +95,11 @@ input::placeholder {
   cursor: pointer;
 }
 
+/* Add feed modal */
+#new-feed .modal-content {
+  border-radius: 18px;
+}
+
 .form-btn {
   width: 100px !important;
   margin-left: 20px;
@@ -97,32 +110,45 @@ input::placeholder {
   border-color: var(--bg-new-feed);
 }
 
-.news {
-  background-color: var(--bg-news);
-  border-radius: 25px;
-}
-
 .form-buttons button:hover {
   opacity: 0.8;
   border-color: #505050 !important;
 }
 
-.categoria-label {
-  background-color: #E0861E;
-  color: white;
+/* Articles format */
+.news {
+  background-color: var(--bg-news);
   border-radius: 25px;
-  width: 150px;
+}
+
+.news-image {
+  display: block;
+  margin-right: 2rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 280px;
+  height: 161px;
+}
+
+.title {
+  font-family: var(--extrabold-font);
+}
+
+.fecha {
   font-style: italic;
 }
 
-.footer {
-  font-style: italic;
-
+.categoria-label {
+  background-color: var(--bg-category-tag);
+  color: white;
+  border-radius: 25px;
+  width: 150px;
+  font-family: var(--italic-bold-font);
 }
 
 .visitar {
   align-items: center;
   cursor: pointer;
-  text-decoration: underline;  
+  text-decoration: underline;
   font-weight: bold;
 }

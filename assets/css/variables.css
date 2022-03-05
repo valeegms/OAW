@@ -3,11 +3,16 @@
 :root {
   --bg-sidebar: #ef952b;
   --bg-new-feed: #da7600;
-  --bg-news: #FFBC6E;
+  --bg-new-feed-hover: #ce6e00;
+  --bg-news: #ffbc6e;
   --titles-sidebar: #fff8d2;
+  --bg-category-tag: #e0861e;
 
   --regular-font: "Nunito", sans-serif;
   --semibold-font: "Nunito-Semibold", sans-serif;
   --bold-font: "Nunito-Bold", sans-serif;
+  --extrabold-font: "Nunito-ExtraBold", sans-serif;
   --italic-font: "Nunito-Italic", sans-serif;
+  --italic-bold-font: "Nunito-Bold-Italic", sans-serif;
+  --italic-extrabold-font: "Nunito-ExtraBold-Italic", sans-serif;
 }
