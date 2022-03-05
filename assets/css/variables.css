@@ -1,0 +1,13 @@
+@import "fontface.css";
+
+:root {
+  --bg-sidebar: #ef952b;
+  --bg-new-feed: #da7600;
+  --bg-news: #FFBC6E;
+  --titles-sidebar: #fff8d2;
+
+  --regular-font: "Nunito", sans-serif;
+  --semibold-font: "Nunito-Semibold", sans-serif;
+  --bold-font: "Nunito-Bold", sans-serif;
+  --italic-font: "Nunito-Italic", sans-serif;
+}
