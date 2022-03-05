@@ -86,3 +86,43 @@ input::placeholder {
   align-items: center;
   cursor: pointer;
 }
+
+.form-btn {
+  width: 100px !important;
+  margin-left: 20px;
+}
+
+#add-btn {
+  background-color: var(--bg-new-feed);
+  border-color: var(--bg-new-feed);
+}
+
+.news {
+  background-color: var(--bg-news);
+  border-radius: 25px;
+}
+
+.form-buttons button:hover {
+  opacity: 0.8;
+  border-color: #505050 !important;
+}
+
+.categoria-label {
+  background-color: #E0861E;
+  color: white;
+  border-radius: 25px;
+  width: 150px;
+  font-style: italic;
+}
+
+.footer {
+  font-style: italic;
+
+}
+
+.visitar {
+  align-items: center;
+  cursor: pointer;
+  text-decoration: underline;  
+  font-weight: bold;
+}
