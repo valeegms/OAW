@@ -1,31 +1,17 @@
 <?php
 
-$url = '';
-$category;
-
-if(isset($_POST['url'])) {
-    $url = $_POST['url'];
-}
-
-if(isset($_POST['category'])) {
-    $category = $_POST['category'];
-}
-
-echo $url;
-
 require_once('autoloader.php');
 
 setlocale(LC_TIME, "es_MX.UTF-8", "Spanish");
 date_default_timezone_set("America/Mexico_City");
 
 $feed = new SimplePie();
- 
 
-$feed->set_feed_url($url);
+$feed->set_feed_url($_GET['url']);
 
 // cache
 $feed->enable_cache(true);
-$feed->set_cache_location('../../cache');
+$feed->set_cache_location('..\..\cache');
 $feed->set_cache_duration(120);
  
 
@@ -78,4 +64,4 @@ foreach ($feed->get_items() as $feedItem) {
 echo json_encode($itemArray);
 
 
-
+?>
