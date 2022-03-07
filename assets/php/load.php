@@ -19,6 +19,10 @@
     
 	mysqli_close($conexion);
 
-	$json_string = json_encode($feeds);
-	echo $json_string;
+    if (isset($feeds)){
+        $json_string = json_encode($feeds);
+        echo $json_string;
+    }
+    else echo json_encode (json_decode ("{}"));
+
 ?>
