@@ -4,6 +4,10 @@ form.onsubmit = () => {
         form.elements['url'].focus();
         return false;
     }
+    if (new URL(form.elements['url'].value)==null){
+        alert("Ingrese una URL v&aacutelida");
+        return false;
+    }
 
     if(form.elements['categoria'].value == "") {
         form.elements['categoria'].focus();
