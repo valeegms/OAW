@@ -6,14 +6,19 @@
 		die("Fallo: " . mysqli_connect_error());
 	}
 
-	$sql = "SELECT url FROM feed WHERE id = 1";
-
+	$sql = "SELECT * FROM feed";
 	$resultado = mysqli_query($conexion, $sql);
+
+	while($row = mysqli_fetch_array($resultado)) { 
+		$id=$row['id'];
+		$url=$row['url'];
+		$category=$row['category'];
+
+		$feeds[] = array('id'=> $id, 'url'=> $url, 'category'=> $category);
+	}
     
 	mysqli_close($conexion);
 
-    $row = mysqli_fetch_array($resultado);
-    echo $row[0];
-    return $row[0];
-    
+	$json_string = json_encode($feeds);
+	echo $json_string;
 ?>

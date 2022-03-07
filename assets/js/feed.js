@@ -1,62 +1,51 @@
-var url;
 window.onload = () => {
+    let feed_json;
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
         if (xhttp.readyState==XMLHttpRequest.DONE) {
-            url = xhttp.responseText;
-            load();
+            feed_json = JSON.parse(xhttp.responseText);
+            // load(feed_json[0].url);
+            load_sidebar(feed_json);
         }
     }
     xhttp.open("GET", "assets/php/load.php");
     xhttp.send();    
 }
 
-function load () {
-    console.log(url);
+function load(url) {
     let xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         if (this.readyState === 4 && this.status === 200) {
-            let itemArray = JSON.parse(this.response);
-            for (let i in itemArray){
-                let itemPermalink = itemArray[i][0];
-                let itemTitle = itemArray[i][1];
-                let itemImgUrl = itemArray[i][2];
-                let itemText = itemArray[i][3];
-                let itemDate = itemArray[i][4];
-
-                let itemDiv = document.createElement("div");
-                itemDiv.classList.add("container");
-                itemDiv.classList.add("p-5");
-                itemDiv.classList.add("text-black");
-                itemDiv.classList.add("border");
-                itemDiv.classList.add("border-4");
-                itemDiv.classList.add("d-flex","justify-content-center","align-items-center", "flex-column");
-
-                let itemTitleNode =  document.createElement("a");
-                itemTitleNode.innerText = itemTitle;
-                itemDiv.appendChild(itemTitleNode);
-                itemTitleNode.setAttribute("href",itemPermalink);
-                let itemTextNode =  document.createElement("div");
-                itemTextNode.innerHTML = itemText;
-                itemDiv.appendChild(itemTextNode);
-                let itemDateNode =  document.createElement("p");
-                itemDateNode.innerText = itemDate;
-                itemDiv.appendChild(itemDateNode);
-
-                if (itemImgUrl !== ""){
-                    let itemImgNode =  document.createElement("img");
-                    itemImgNode.setAttribute("src", itemImgUrl);
-                    itemImgNode.classList.add("img-fluid");
-                    itemImgNode.classList.add("border");
-                    itemImgNode.classList.add("border-primary");
-
-                    itemDiv.appendChild(itemImgNode);
-                }
-                document.getElementById("news").appendChild(itemDiv);
-            }
+            document.getElementById("news").innerHTML = this.response;
         }
     }
     xhttp.open("GET", "assets/php/rss.php?url="+url);
     xhttp.send();
 }
 
+function load_sidebar(json) {
+    let sidebar = document.getElementById("source-container");
+    sidebar.innerHTML = '';
+    for (let i = 0; i < json.length; i++) {
+        const url = json[i].url;
+        sidebar.innerHTML += sidebar_format(url);
+    }
+    
+}
+
+function get_url(url) {
+    let domain = (new URL(url));
+    domain = domain.hostname.replace('www.','');
+    return domain;
+}
+
+function sidebar_format(url) {
+    let function_call = "load('"+ url + "')";
+    let format = '';
+    format += '<div class="feed-source w-100 rounded-5 d-flex align-items-center" onclick="('+ function_call +')">';
+    format += '<img src="http://www.google.com/s2/favicons?domain=' + get_url(url) + '" alt="">';
+    format +=  '<p>' + get_url(url) + '</p>';
+    format += '</div>';
+
+    return format;
+}

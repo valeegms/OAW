@@ -44,8 +44,6 @@ function returnText ($text) {
 
 }
 
-$itemArray = array();
-
 foreach ($feed->get_items() as $feedItem) {
     $content = $feedItem->get_content();
 
@@ -55,13 +53,27 @@ foreach ($feed->get_items() as $feedItem) {
     $itemText = returnText($content);
     $itemDate = $feedItem->get_local_date("Publicado el %d de %B del %Y a las %H:%M");
 
-    $item = array();
-    array_push($item, $itemPermalink, $itemTitle, $itemImageURL, $itemText, $itemDate);
 
-    $itemArray[] = $item;
+    $format = '<div class="news d-flex justify-content-between align-items-center p-4">
+                    <img class="news-image" src="'. $itemImageURL . '" alt="Imagen">
+                    <div class="info">
+                        <div class="header d-flex justify-content-between pb-3">
+                            <h5 class="title">'. $itemTitle . '</h5>
+                            <div class="categoria-label d-flex justify-content-center pt-1 pb-1">
+                                <p class="m-0 ms-1">Categoria</p>
+                            </div>
+                        </div>
+                        <p>' . $itemText . '</p>
+                        <div class="footer d-flex justify-content-between ">
+                            <p class="fecha">' . $itemDate . '</p>
+                            <div class="visitar d-flex">
+                                <a class="m-0 px-2" href="' . $itemPermalink . '">Visitar sitio</a>
+                                <img id="visitar-btn" src="assets/icons/link.svg" alt="visitar">
+                            </div>
+                        </div>
+                    </div>
+                </div>';
+
+    echo $format;
 }
-
-echo json_encode($itemArray);
-
-
 ?>

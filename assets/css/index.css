@@ -4,16 +4,6 @@ body {
   font-family: var(--regular-font);
 }
 
-.siderbar {
-  width: 320px;
-  background-color: var(--bg-sidebar);
-  color: var(--titles-sidebar);
-  font-family: var(--bold-font);
-  height: 100%;
-  position: absolute;
-  z-index: 100;
-}
-
 .list {
   padding-top: 5rem;
 }
@@ -35,12 +25,53 @@ body {
   width: 24px;
 }
 
+/* sidebar */
+#siderbar {
+  width: 320px;
+  background-color: var(--bg-sidebar);
+  color: var(--titles-sidebar);
+  font-family: var(--bold-font);
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.sidebar-wrapper {
+  position: relative;
+}
+
+#showAll-btn {
+  cursor: pointer;
+}
+
+.feed-source {
+  background-color: var(--bg-source-tag);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.feed-source img {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+}
+
+.feed-source p {
+  font-size: 14px;
+  padding-left: 8px;
+  color: var(--bg-new-feed);
+  margin-bottom: 0;
+}
+
 #add-feed {
   background-color: var(--bg-new-feed);
   cursor: pointer;
   position: fixed;
   bottom: 0;
   width: 320px;
+  color: #ffffff;
 }
 
 #add-feed:hover {
@@ -48,7 +79,12 @@ body {
 }
 
 #logo {
+  margin: auto;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
   align-self: center;
+  border-radius: 100%;
 }
 
 #search-bar {
@@ -119,6 +155,7 @@ input::placeholder {
 .news {
   background-color: var(--bg-news);
   border-radius: 25px;
+  margin-bottom: 1.3rem;
 }
 
 .news-image {
@@ -140,15 +177,19 @@ input::placeholder {
 
 .categoria-label {
   background-color: var(--bg-category-tag);
-  color: white;
+  color: #ffffff;
   border-radius: 25px;
   width: 150px;
   font-family: var(--italic-bold-font);
 }
 
 .visitar {
+  font-style: italic;
   align-items: center;
   cursor: pointer;
-  text-decoration: underline;
+}
+
+.visitar a {
+  color: #000000;
   font-weight: bold;
 }
