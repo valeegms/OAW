@@ -156,17 +156,19 @@ input::placeholder {
   background-color: var(--bg-news);
   border-radius: 25px;
   margin-bottom: 1.3rem;
+
 }
 
 .news-image {
-  display: block;
-  margin-right: 2rem;
   background-color: #ffffff;
-  border-radius: 100%;
-  width: 280px;
-  height: 161px;
+  height: 200px;
+  width: 200px;
 }
 
+.info{
+  height: 300px;
+  overflow: auto;
+}
 .title {
   font-family: var(--extrabold-font);
 }
