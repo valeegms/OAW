@@ -2,5 +2,5 @@
     $servidor = "localhost";
     $usuario = "root";
     $contrasena = "";
-    $basedatos = "feedTest";
+    $basedatos = "rss";
 ?>

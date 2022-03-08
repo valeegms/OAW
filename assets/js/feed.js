@@ -8,7 +8,6 @@ function load_feeds(){
     xhttp.onreadystatechange = () => {
         if (xhttp.readyState==XMLHttpRequest.DONE) {
             feed_json = JSON.parse(xhttp.responseText);
-            // load(feed_json[0].url);
             load_sidebar(feed_json);
         }
     }
