@@ -54,6 +54,9 @@ foreach ($feed->get_items() as $feedItem) {
     $itemImageURL = returnScrapedImage($content);
     if ($itemImageURL === ""){
         $itemImageURL = $feedItem->get_feed()->get_image_url();
+        if ($itemImageURL === null) {
+            $itemImageURL = "assets/icons/default-news-image.png";
+        }
     }
     $itemText = returnText($content);
     $itemDate = $feedItem->get_local_date("Publicado el %d de %B del %Y a las %H:%M");
@@ -64,7 +67,7 @@ foreach ($feed->get_items() as $feedItem) {
         $categoryLabel = $category->get_label();
     }
 
-    $format = '<div class="news d-flex justify-content-between align-items-center p-4 row">
+    $format = '<div class="news d-flex justify-content-between align-items-center p-4 row w-100">
                     <div class="d-flex flex-column col-3 p-3 justify-content-center align-items-center" id="news-image-container">
                     <p>' . $itemFeedTitle . '</p>
                     <img class="news-image rounded rounded-circle" src="'. $itemImageURL . '" alt="Imagen">

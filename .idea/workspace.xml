@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable">
+    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/load.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/read_db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/php/rss.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/rss.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/server_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/server_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/ca9f8aa6d39bf8c1cc3dd91064d96429.spc" beforeDir="false" afterPath="$PROJECT_DIR$/cache/ca9f8aa6d39bf8c1cc3dd91064d96429.spc" afterDir="false" />
     </list>
     <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
@@ -62,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646462626215</updated>
       <workItem from="1646462631378" duration="32000" />
-      <workItem from="1646712745749" duration="11888000" />
+      <workItem from="1646712745749" duration="13742000" />
     </task>
     <task id="LOCAL-00001" summary="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos">
       <created>1646671831116</created>
@@ -78,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646674749790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php">
+      <created>1646730257454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646730257454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos" />
     <MESSAGE value="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable" />
+    <MESSAGE value="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php" />
   </component>
 </project>
