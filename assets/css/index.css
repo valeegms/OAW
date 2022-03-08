@@ -44,6 +44,10 @@ body {
   cursor: pointer;
 }
 
+#source-container{
+  overflow:auto;
+  height: 200px;
+}
 .feed-source {
   background-color: var(--bg-source-tag);
   border-radius: 20px;
