@@ -7,8 +7,10 @@ date_default_timezone_set("America/Mexico_City");
 
 $feed = new SimplePie();
 
-$feed->set_feed_url($_GET['url']);
+$json = file_get_contents('php://input');
+$feedUrls = json_decode($json);
 
+$feed->set_feed_url($feedUrls);
 // cache
 $feed->enable_cache(true);
 $feed->set_cache_location('..\..\cache');
@@ -44,25 +46,27 @@ function returnText ($text) {
 
 }
 
-$feedTitle = $feed->get_title();
-
-echo '<h1 class="fw-bold">'.$feedTitle.'</h1>';
-
 foreach ($feed->get_items() as $feedItem) {
     $content = $feedItem->get_content();
-
+    $itemFeedTitle = $feedItem->get_feed()->get_title();
     $itemPermalink = $feedItem->get_permalink();
     $itemTitle = $feedItem->get_title();
     $itemImageURL = returnScrapedImage($content);
     if ($itemImageURL === ""){
-        $itemImageURL = $feed->get_image_url();
+        $itemImageURL = $feedItem->get_feed()->get_image_url();
     }
     $itemText = returnText($content);
     $itemDate = $feedItem->get_local_date("Publicado el %d de %B del %Y a las %H:%M");
 
+    $categoryLabel = "Sin categor&iacutea";
+    if ($category = $feedItem->get_category())
+    {
+        $categoryLabel = $category->get_label();
+    }
 
     $format = '<div class="news d-flex justify-content-between align-items-center p-4 row">
-                    <div class="d-flex col-3 p-3 justify-content-center align-items-center" id="news-image-container">
+                    <div class="d-flex flex-column col-3 p-3 justify-content-center align-items-center" id="news-image-container">
+                    <p>' . $itemFeedTitle . '</p>
                     <img class="news-image rounded rounded-circle" src="'. $itemImageURL . '" alt="Imagen">
                     </div>
         
@@ -70,9 +74,10 @@ foreach ($feed->get_items() as $feedItem) {
                         <div class="header d-flex justify-content-between mb-4">
                             <h5 class="title">'. $itemTitle . '</h5>
                             <div class="categoria-label d-flex justify-content-center align-items-center p-2 h-50">
-                                Categor&iacutea
+                                '.$categoryLabel.'
                             </div>
                         </div>
+                
                         <p>' . $itemText . '</p>
                         <div class="footer d-flex justify-content-between mt-5 ">
                             <p class="fecha">' . $itemDate . '</p>
