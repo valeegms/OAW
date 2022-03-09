@@ -9,12 +9,11 @@
 	$sql = "SELECT * FROM feed";
 	$resultado = mysqli_query($conexion, $sql);
 
-	while($row = mysqli_fetch_array($resultado)) { 
-		$id=$row['id'];
-		$url=$row['url'];
+	while($row = mysqli_fetch_array($resultado)) {
+		$url=$row['feed_url'];
 		$category=$row['category'];
 
-		$feeds[] = array('id'=> $id, 'url'=> $url, 'category'=> $category);
+		$feeds[] = array('feed_url'=> $url, 'category'=> $category);
 	}
     
 	mysqli_close($conexion);

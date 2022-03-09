@@ -1,71 +1,26 @@
 <?php
 
 require_once('autoloader.php');
-
+include("query_sql.php");
+include("server_data.php");
 setlocale(LC_TIME, "es_MX.UTF-8", "Spanish");
 date_default_timezone_set("America/Mexico_City");
 
-$feed = new SimplePie();
+$feedUrlToSearch = file_get_contents("php://input");
+if ($feedUrlToSearch ==="all") $sql = "SELECT feed.feed_title, news.* FROM feed INNER JOIN news ON feed.feed_url=news.feed_url;";
 
-$json = file_get_contents('php://input');
-$feedUrls = json_decode($json);
+else $sql = "SELECT feed.feed_title, news.* FROM feed INNER JOIN news ON feed.feed_url=news.feed_url WHERE feed.feed_url = '".$feedUrlToSearch."';";
+$newsArray = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sql);
 
-$feed->set_feed_url($feedUrls);
-// cache
-$feed->enable_cache(true);
-$feed->set_cache_location('..\..\cache');
-$feed->set_cache_duration(120);
- 
+foreach ($newsArray as $feedItem) {
+    $itemFeedTitle = $feedItem["feed_title"];
+    $itemPermalink = $feedItem["link"];
+    $itemTitle = $feedItem["news_title"];
+    $itemImageURL = $feedItem["image_url"];
+    $itemText = $feedItem["text"];
+    $itemDate = strftime("Publicado el %d del %B del %Y a las %H:%M",strtotime($feedItem["date"]));
 
-$feed->init();
- 
-
-$feed->handle_content_type();
-
-function returnScrapedImage ($text) {
-    $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
-    $pattern = "/<img[^>]+\>/i";
-    preg_match($pattern, $text, $matches);
-    if (empty($matches)) return "";
-    else $text = $matches[0];
-    $pattern = '/src=[\'"]?([^\'" >]+)[\'" >]/';
-    preg_match($pattern, $text, $link);
-    $link = $link[1];
-    $link = urldecode($link);
-    return $link;
-}
-
-function returnText ($text) {
-    $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
-    $pattern = "/<img[^>]+\>/i";
-    preg_match_all($pattern, $text, $matches);
-    foreach ($matches as $imgTag){
-        $text = str_replace($imgTag,"",$text);
-    }
-    return $text;
-
-}
-
-foreach ($feed->get_items() as $feedItem) {
-    $content = $feedItem->get_content();
-    $itemFeedTitle = $feedItem->get_feed()->get_title();
-    $itemPermalink = $feedItem->get_permalink();
-    $itemTitle = $feedItem->get_title();
-    $itemImageURL = returnScrapedImage($content);
-    if ($itemImageURL === ""){
-        $itemImageURL = $feedItem->get_feed()->get_image_url();
-        if ($itemImageURL === null) {
-            $itemImageURL = "assets/icons/default-news-image.png";
-        }
-    }
-    $itemText = returnText($content);
-    $itemDate = $feedItem->get_local_date("Publicado el %d de %B del %Y a las %H:%M");
-
-    $categoryLabel = "Sin categor&iacutea";
-    if ($category = $feedItem->get_category())
-    {
-        $categoryLabel = $category->get_label();
-    }
+    $categoryLabel = $feedItem["category"];
 
     $format = '<div class="news d-flex justify-content-between align-items-center p-4 row w-100">
                     <div class="d-flex flex-column col-3 p-3 justify-content-center align-items-center" id="news-image-container">

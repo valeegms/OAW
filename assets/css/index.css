@@ -44,6 +44,10 @@ body {
   cursor: pointer;
 }
 
+#delete{
+  cursor:pointer;
+}
+
 #source-container{
   overflow:auto;
   height: 200px;
