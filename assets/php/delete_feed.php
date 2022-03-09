@@ -6,7 +6,7 @@ if (!$conexion) {
     die("Fallo: " . mysqli_connect_error());
 }
 $url = $_REQUEST["url"];
-$sql = "DELETE FROM feed WHERE feed.url = '$url'";
+$sql = "DELETE FROM feed WHERE feed.feed_url = '$url'";
 
 $resultado = mysqli_query($conexion, $sql);
 

@@ -19,11 +19,6 @@
                     <img id="logo" src="https://th.bing.com/th/id/OIP.QdEkrZjd1c_VN_aUtleoFgHaEo?pid=ImgDet&rs=1" alt="LOGO">
                     <div class="list d-flex justify-content-between">
                         <h6>FEEDS GUARDADOS</h6>
-                        <img id="list-btn" src="assets/icons/lista.svg" alt="lista">
-                    </div>
-                    <div id="showAll-btn" class="d-flex mb-4">
-                        <img src="assets/icons/rss-icon.svg" alt="RSS">
-                        <p class="m-0 ms-1">Mostrar todo</p>
                     </div>
                     <div id="source-container"></div>
                 </div>
@@ -80,10 +75,13 @@
                     <img id="search-icon" src="assets/icons/search.svg" alt="Buscar">
                     <input id="search-input" class="rounded-pill border-1 border-dark pt-1 pb-1" type="text" placeholder="Buscar título">
                 </div>
-                <div class="sort-articles">
+                <div class="sort-articles" id="sorting-options">
                     <label class="pe-1" for="sorting-options">Ordenar por:</label>
                     <select class="sort-by rounded-pill p-1 pe-2 ps-2" name="sort-by" id="sort-by">
-                        <option selected>Más reciente</option>
+                        <option selected id="recentSort">Más reciente</option>
+                        <option id = oldSort>Más antiguo</option>
+                        <option id="ascAlphaSort" >A-Z</option>
+                        <option id="descAlphaSort">Z-A</option>
                     </select>
                 </div>
                 <div id="refresh" class="d-flex">

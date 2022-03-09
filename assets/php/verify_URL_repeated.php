@@ -8,7 +8,7 @@ if (!$conexion) {
     die("Fallo: " . mysqli_connect_error());
 }
 $url=$_REQUEST["url"];
-$sql = "SELECT * from feed where url='".$url."';";
+$sql = "SELECT * from feed where feed_url='".$url."';";
 $resultado = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sql);
 $numeroURLS = count($resultado);
 echo  $numeroURLS;
