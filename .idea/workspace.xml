@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable">
-      <change afterPath="$PROJECT_DIR$/assets/php/get_categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/php/get_news_by_category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/php/get_news_by_order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/php/refresh_all_news.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/php/refresh_news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/delete_feed.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/delete_feed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/query_sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/query_sql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/read_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/read_db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/rss.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/get_news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/save_feeds.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/save_feeds.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/save_news.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/save_news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/verify_URL_repeated.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/verify_URL_repeated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/feafeaa3eceb3af2de6fdeca99150b3a.spc" beforeDir="false" afterPath="$PROJECT_DIR$/cache/feafeaa3eceb3af2de6fdeca99150b3a.spc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
     <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
@@ -36,10 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="category-rework" />
+        <entry key="$PROJECT_DIR$" value="db-rework" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="valeegms" />
+        <option name="repository" value="OAW" />
+      </RepoCoordinatesHolder>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,7 +64,7 @@
       <updated>1646462626215</updated>
       <workItem from="1646462631378" duration="32000" />
       <workItem from="1646712745749" duration="14245000" />
-      <workItem from="1646797895979" duration="23719000" />
+      <workItem from="1646797895979" duration="24148000" />
     </task>
     <task id="LOCAL-00001" summary="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos">
       <created>1646671831116</created>
@@ -104,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646732031124</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes">
+      <created>1646824657093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824657093</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +123,7 @@
     <MESSAGE value="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable" />
     <MESSAGE value="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php" />
     <MESSAGE value="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable" />
+    <MESSAGE value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
   </component>
 </project>
