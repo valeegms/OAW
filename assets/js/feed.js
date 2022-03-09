@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
     let allBtn = document.getElementById("all");
     allBtn.onclick = load_all_news;
 
-load_sidebar();
-load_all_news();
+    load_sidebar();
+    load_all_news();
 }) ;
 
 function load_all_news(){

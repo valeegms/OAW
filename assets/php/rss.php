@@ -91,7 +91,17 @@ foreach ($feed->get_items() as $feedItem) {
                         </div>
                     </div>
                 </div>';
-
     echo $format;
 }
+
+    function getFeedTitle($url){
+        $feed = new SimplePie();
+        $feed->set_feed_url($url);
+        $feed->enable_cache(true);
+        $feed->set_cache_location('..\..\cache');
+        $feed->set_cache_duration(120);
+        $feed->init();
+        $feed->handle_content_type();
+        return $feed->get_title();
+    }
 ?>
