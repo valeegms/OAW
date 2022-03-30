@@ -19,7 +19,7 @@ function printNews($newsArray){
         
                     <div class="info col-9">
                         <div class="header d-flex justify-content-between mb-4">
-                            <h5 class="title">'. $itemTitle . '</h5>
+                            <p class="title h5">'. $itemTitle . '</p>
                             <div class="categoria-label d-flex justify-content-center align-items-center p-2 h-50">
                                 '.$categoryLabel.'
                             </div>
