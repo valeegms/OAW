@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="Icon optimization&#10;- Icons now are CSS sprites&#10;&#10;PHP optimization&#10;- Repetitive code (format &amp; print news code) now is a function">
+    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="Render blocking avoided&#10;- CSS inlined on index html.&#10;&#10;+1 point on accesibility&#10;- h5 replaced to a paragraph on print_news_function.php">
+      <change afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/myfile-min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/yuicompressor.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/compiler.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmlcompressor.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/save_news.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/save_news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/search_bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/search_bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/validate_feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/validate_feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/051ffa0e2f1a47ec2b95fe4425f64447.spc" beforeDir="false" afterPath="$PROJECT_DIR$/cache/051ffa0e2f1a47ec2b95fe4425f64447.spc" afterDir="false" />
     </list>
     <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +22,15 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="package.json" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -31,32 +48,35 @@
       </RepoCoordinatesHolder>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/assets/js/validate_feed.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/assets/js/feed.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/assets/js/search_bar.js" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25xJ5SBtxtdYxzu6s7Vn2U1J5Ec" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../proyecto/funciones.php" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\xampp\htdocs\OAW\assets\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\OAW" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -107,7 +127,28 @@
       <option name="project" value="LOCAL" />
       <updated>1646824657093</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Icon optimization&#10;- Icons now are CSS sprites&#10;&#10;Images optimization&#10;- Images compressed&#10;- Logo is now stored locally and compressed (21 kb -&gt; 3 kb plus faster load)&#10;- GIF loading image optimized&#10;&#10;PHP optimization&#10;- Repetitive code (format &amp; print news code) now is a function">
+      <created>1648627163545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648627163545</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Font optimizationts&#10;- Font fallback CSS added&#10;&#10;SEO optimizationes&#10;- Meta description added&#10;&#10;Script optimizations&#10;- Scripts inline HTML now have defer attribute">
+      <created>1648631455048</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648631455048</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Render blocking avoided&#10;- CSS inlined on index html.&#10;&#10;+1 point on accesibility&#10;- h5 replaced to a paragraph on print_news_function.php">
+      <created>1648632911752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648632911752</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,11 +166,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos" />
     <MESSAGE value="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable" />
     <MESSAGE value="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php" />
     <MESSAGE value="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable" />
     <MESSAGE value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
+    <MESSAGE value="Icon optimization&#10;- Icons now are CSS sprites&#10;&#10;Images optimization&#10;- Images compressed&#10;- Logo is now stored locally and compressed (21 kb -&gt; 3 kb plus faster load)&#10;- GIF loading image optimized&#10;&#10;PHP optimization&#10;- Repetitive code (format &amp; print news code) now is a function" />
+    <MESSAGE value="Font optimizationts&#10;- Font fallback CSS added&#10;&#10;SEO optimizationes&#10;- Meta description added&#10;&#10;Script optimizations&#10;- Scripts inline HTML now have defer attribute" />
+    <MESSAGE value="Render blocking avoided&#10;- CSS inlined on index html.&#10;&#10;+1 point on accesibility&#10;- h5 replaced to a paragraph on print_news_function.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Render blocking avoided&#10;- CSS inlined on index html.&#10;&#10;+1 point on accesibility&#10;- h5 replaced to a paragraph on print_news_function.php" />
   </component>
 </project>
