@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
+    <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="db-rework" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="valeegms" />
+        <option name="repository" value="OAW" />
+      </RepoCoordinatesHolder>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25xJ5SBtxtdYxzu6s7Vn2U1J5Ec" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proyecto/funciones.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\OAW\assets\icons" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="" />
+      <created>1646462626215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646462626215</updated>
+      <workItem from="1646462631378" duration="32000" />
+      <workItem from="1646712745749" duration="14245000" />
+      <workItem from="1646797895979" duration="24148000" />
+    </task>
+    <task id="LOCAL-00001" summary="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos">
+      <created>1646671831116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646671831116</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable">
+      <created>1646674749790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646674749790</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php">
+      <created>1646730257454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646730257454</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable">
+      <created>1646732031124</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646732031124</updated>
+    </task>
+    <task id="LOCAL-00005" summary="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes">
+      <created>1646824657093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824657093</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos" />
+    <MESSAGE value="Added feed titles and size limit&#10;- Now news with no image shows default feed image&#10;- News image fixed at 200px x 200px size&#10;- Feed title shows up at top of page&#10;- News are now scrollable" />
+    <MESSAGE value="New features&#10;- Now all news from all registered feeds appears when page loads. Some functions of feed.js was changed because of this&#10;- Category names of news displays at right of the news item&#10;- New loading animation when changing between feeds or updating&#10;- Removed general feed title. Now the title of the feed appears above item image. This is for better understanding when displaying all news from all feeds.&#10;- load.php renamed to read_db.php" />
+    <MESSAGE value="Minor features&#10;- Now feed items without image shows a default image&#10;- Feed container now is scrollable" />
+    <MESSAGE value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
+  </component>
+</project>
