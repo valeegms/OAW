@@ -208,12 +208,12 @@ function sidebar_format(url) {
     let load_news_call = "load_news('"+ url + "')";
     let delete_call = "delete_feed('"+ url + "')"
     let format = '';
-    format += '<div class="d-flex align-items-center justify-content-center py-2">';
-    format += '<div class="feed-source w-100 rounded-5 d-flex align-items-center justify-content-center mb-0 me-3" onclick="('+ load_news_call +')">';
+    format += '<div class="d-flex align-items-center justify-content-between py-2">';
+    format += '<div class="feed-source rounded-5 w-75 d-flex align-items-center justify-content-center m-0" onclick="('+ load_news_call +')">';
     format += '<img src="http://www.google.com/s2/favicons?domain=' + get_url(url) + '" alt="">';
     format +=  '<p>' + get_url(url) + '</p>';
     format += '</div>';
-    format += '<img id="delete" src="assets/icons/delete.png" height="30px" width="30px" onclick="('+ delete_call +')">'
+    format += '<div id="delete" class="bg-delete" onclick="('+ delete_call +')"></div>'
     format += '</div>';
 
     return format;

@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes" />
-    <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="36d1a48f-0c9e-4df8-8d40-79e454dc6439" name="Changes" comment="New features&#10;- Order working&#10;- Categories working&#10;- Refreshes working&#10;&#10;- Several changes">
+      <change afterPath="$PROJECT_DIR$/assets/php/print_news_function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/actualizar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/anadir.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/lista.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/rss-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/get_news.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/get_news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/get_news_by_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/get_news_by_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/get_news_by_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/get_news_by_order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/8e28b03f4d9f752dadd0f30aeb24c965.spc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/f0c7d0afcfc855b4154b0394cae94f28.spc" beforeDir="false" afterPath="$PROJECT_DIR$/cache/f0c7d0afcfc855b4154b0394cae94f28.spc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
+    <list id="d4548d51-fb89-407c-8838-da1e43b803ec" name="ignore" comment="ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="db-rework" />
+        <entry key="$PROJECT_DIR$" value="optimizado" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +44,11 @@
         <option name="repository" value="OAW" />
       </RepoCoordinatesHolder>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/assets/js/validate_feed.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assets/js/feed.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assets/js/search_bar.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,6 +84,7 @@
       <workItem from="1646462631378" duration="32000" />
       <workItem from="1646712745749" duration="14245000" />
       <workItem from="1646797895979" duration="24148000" />
+      <workItem from="1648606415810" duration="5433000" />
     </task>
     <task id="LOCAL-00001" summary="Delete feed button added&#10;- Fixed logo image not centered perfectly&#10;- Fixed returning empty JSON when database is empty&#10;- Some functions of feed.js renamed for better understanding&#10;- Fixed some typos">
       <created>1646671831116</created>

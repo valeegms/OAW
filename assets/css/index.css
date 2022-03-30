@@ -20,10 +20,6 @@ body {
   width: 28px;
 }
 
-#add-icon,
-#refresh-btn {
-  width: 24px;
-}
 
 /* sidebar */
 #siderbar {
@@ -108,7 +104,7 @@ input::placeholder {
   z-index: 2;
   display: block;
   margin-top: 8px;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 #search-input {
@@ -202,4 +198,29 @@ input::placeholder {
 .visitar a {
   color: #000000;
   font-weight: bold;
+}
+
+.bg-delete {
+  width: 32px; height: 32px;
+  background: url('../icons/css_sprites.png') -10px -10px;
+}
+
+.bg-anadir {
+  width: 18px; height: 18px;
+  background: url('../icons/css_sprites.png') -62px -10px;
+}
+
+.bg-actualizar {
+  width: 18px; height: 18px;
+  background: url('../icons/css_sprites.png') -10px -62px;
+}
+
+.bg-link {
+  width: 18px; height: 18px;
+  background: url('../icons/css_sprites.png') -48px -62px;
+}
+
+.bg-search {
+  width: 18px; height: 18px;
+  background: url('../icons/css_sprites.png') -100px -10px;
 }
