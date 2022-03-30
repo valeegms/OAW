@@ -2,24 +2,28 @@
   font-family: "Nunito";
   src: url("../fonts/Nunito-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "Nunito-Semibold";
   src: url("../fonts/Nunito-SemiBold.ttf") format("truetype");
   font-weight: 600;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "Nunito-Bold";
   src: url("../fonts/Nunito-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "Nunito-ExtraBold";
   src: url("../fonts/Nunito-ExtraBold.ttf") format("truetype");
   font-weight: 800;
+  font-display: fallback;
 }
 
 @font-face {
@@ -27,6 +31,7 @@
   src: url("../fonts/Nunito-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: fallback;
 }
 
 @font-face {
@@ -34,6 +39,7 @@
   src: url("../fonts/Nunito-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
+  font-display: fallback;
 }
 
 @font-face {
@@ -41,4 +47,5 @@
   src: url("../fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
+  font-display: fallback;
 }
