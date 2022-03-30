@@ -34,6 +34,7 @@ function save_news ($feed_urls)
                     $itemImageURL = "assets/icons/default-news-image.png";
                 }
             }
+
             $itemText = returnText($content);
 
             $itemDate = $feedItem->get_local_date("%Y-%m-%d %H:%M:%S");
